@@ -19,7 +19,9 @@
    ```bash
    npm install
    npm run compile 
-   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin
+   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --config-file slither.config.json
+   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --detect pattern-recognition --pattern-file patterns.json
+   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --detect decimal-mismatch
    ```
 
 3. Run the project:
