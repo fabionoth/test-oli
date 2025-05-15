@@ -1,0 +1,24 @@
+{
+    "solc-allow-paths": [
+      ".",
+      "node_modules/"
+    ],
+    "detectors": [
+      "reentrancy",
+      "unprotected-upgrade",
+      "unchecked-lowlevel-calls",
+      "decimal-mismatch"
+    ],
+    "exclude": [
+      "node_modules/"
+    ],
+    "decimal-mismatch": {
+      "patterns": [
+        {
+          "name": "DecimalMismatch",
+          "match": "*10**$DEC*",
+          "message": "Possible decimal scale mismatch: hardcoded power-of-ten without token.decimals()"
+        }
+      ]
+    }
+  }
