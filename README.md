@@ -19,8 +19,7 @@
    ```bash
    npm install
    npm run compile 
-   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --config-file slither.config.json
-   slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --detect pattern-recognition --pattern-file patterns.json
+   cp decimal_mismatch_detector.py  ~/.local/lib/python3.10/site-packages/slither/detectors/
    slither contracts/ --solc-remaps @openzeppelin=node_modules/@openzeppelin --detect decimal-mismatch
    ```
 
